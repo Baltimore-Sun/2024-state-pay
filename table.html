@@ -1,0 +1,89 @@
+<html><head>
+  <title>2024 Maryland state government pay</title>
+
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width" />
+
+
+  <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+
+
+  <link href="https://cdn.datatables.net/v/dt/dt-2.2.2/r-3.0.4/datatables.min.css" rel="stylesheet" integrity="sha384-gmZ5jterufNKMboaPX/+AZbRRbDF+z379XQUHv6DYWg2o8yTKtN/tMySXHexqf8y" crossorigin="anonymous">
+ 
+  <script src="https://cdn.datatables.net/v/dt/dt-2.2.2/r-3.0.4/datatables.min.js" integrity="sha384-340kE+RFFzUA/C9OCZW0VbqKLMOXLTO4/ZfWMEI/eBfwR1YuVsxZgZx/kobR4cbc" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://use.typekit.net/mlb5rgi.css">
+<style>
+    body {
+        font-family: "droid-sans", sans-serif;
+        font-size:.91em;
+
+    }
+    #tbl24 {
+        font-family: "droid-sans", sans-serif;
+        font-size:.96em;
+    }
+</style>
+</head><body>
+<script>
+
+DataTable.ext.errMode = 'none';
+
+
+  $(document).ready(function() {
+
+ 
+  
+    new DataTable('#tbl24', {
+    ajax: 'https://uceb43d023c6b2cf86bb7dba7896.dl.dropboxusercontent.com/cd/0/inline/Ck6D6IL56MXoFdh3Ff9OPLpUq0UA5MqOS8vWMWnWMWfW5p6CldAr-MbhUuDr8GcLuJk1gXAULKn3xWhTixRTd-Eo-EvPl5zATGHxuqND3KBtVvxQ9MqgAEF_Kj5P3n-KAMo/file#',
+    scrollX: true,
+    order: [[2, 'des']],
+    pageLength: 20,
+    responsive: true,
+    lengthChange: false,
+    layout: {
+    topStart: 'search',
+    topEnd: null,
+    bottomStart: 'info',
+    bottomEnd: 'paging'
+},
+    columns: [
+        { data: 'Name' },
+        { data: 'Org' },
+        { data: 'Gross', orderSequence: ['desc', 'asc'], render: $.fn.dataTable.render.number(",", ".", 0, "$") },
+        { data: 'Overtime', orderSequence: ['desc', 'asc'], render: $.fn.dataTable.render.number(",", ".", 0, "$") },
+        { data: 'Other', orderSequence: ['desc', 'asc'], render: $.fn.dataTable.render.number(",", ".", 0, "$") },
+        { data: 'Contractor' }
+    ]
+});
+
+ 
+
+ 
+
+  });
+  
+ 
+  </script>
+
+
+<table id="tbl24" class="display" style="font-family: 'Droid Sans', sans-serif;font-size:.96em;">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Org</th>
+            <th>Gross</th>
+            <th>Overtime</th>
+            <th>Other</th>
+            <th>Contractor</th>
+        </tr>
+    </thead>
+    
+</table>
+
+
+
+</body>
+</html>
